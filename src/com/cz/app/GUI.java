@@ -14,57 +14,61 @@ import javax.swing.GroupLayout;
 public class GUI extends JFrame {
     public GUI() {
         initComponents();
+        this.setVisible(true);
     }
 
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
-        // Generated using JFormDesigner Evaluation license - Yishuo Wang
-        comboBox1 = new JComboBox();
-        textField1 = new JTextField();
-        button1 = new JButton();
-        label2 = new JLabel();
-        label3 = new JLabel();
-        textField2 = new JTextField();
-        textField3 = new JTextField();
+        // Generated using JFormDesigner Evaluation license - Tianyao Luo
+        cbx_user = new JComboBox();
+        txt_url = new JTextField();
+        btn_submit = new JButton();
+        lbl_end = new JLabel();
+        lbl_start = new JLabel();
+        txt_start = new JTextField();
+        txt_end = new JTextField();
         scrollPane1 = new JScrollPane();
-        list1 = new JList();
-        checkBox1 = new JCheckBox();
-        button2 = new JButton();
-        button3 = new JButton();
-        label4 = new JLabel();
-        label5 = new JLabel();
+        list_results = new JList();
+        cbx_option = new JCheckBox();
+        btn_open = new JButton();
+        btn_export = new JButton();
+        lbl_logo2 = new JLabel();
+        lbl_logo1 = new JLabel();
 
         //======== this ========
         Container contentPane = getContentPane();
 
-        //---- button1 ----
-        button1.setText("text");
+        //---- txt_url ----
+        txt_url.setText("http://");
 
-        //---- label2 ----
-        label2.setText("text");
+        //---- btn_submit ----
+        btn_submit.setText("SUBMIT");
 
-        //---- label3 ----
-        label3.setText("text");
+        //---- lbl_end ----
+        lbl_end.setText("End Date");
+
+        //---- lbl_start ----
+        lbl_start.setText("Start Date");
 
         //======== scrollPane1 ========
         {
-            scrollPane1.setViewportView(list1);
+            scrollPane1.setViewportView(list_results);
         }
 
-        //---- checkBox1 ----
-        checkBox1.setText("text");
+        //---- cbx_option ----
+        cbx_option.setText("Advanced Options");
 
-        //---- button2 ----
-        button2.setText("text");
+        //---- btn_open ----
+        btn_open.setText("OPEN");
 
-        //---- button3 ----
-        button3.setText("text");
+        //---- btn_export ----
+        btn_export.setText("EXPORT");
 
-        //---- label4 ----
-        label4.setText("text");
+        //---- lbl_logo2 ----
+        lbl_logo2.setText("LOGO");
 
-        //---- label5 ----
-        label5.setText("text");
+        //---- lbl_logo1 ----
+        lbl_logo1.setText("LOGO!");
 
         GroupLayout contentPaneLayout = new GroupLayout(contentPane);
         contentPane.setLayout(contentPaneLayout);
@@ -76,30 +80,30 @@ public class GUI extends JFrame {
                         .addComponent(scrollPane1, GroupLayout.DEFAULT_SIZE, 496, Short.MAX_VALUE)
                         .addGroup(GroupLayout.Alignment.TRAILING, contentPaneLayout.createSequentialGroup()
                             .addGroup(contentPaneLayout.createParallelGroup()
-                                .addComponent(checkBox1)
+                                .addComponent(cbx_option)
                                 .addGroup(contentPaneLayout.createSequentialGroup()
                                     .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(label3, GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE)
-                                        .addComponent(label2, GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE))
+                                        .addComponent(lbl_start, GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE)
+                                        .addComponent(lbl_end, GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE))
                                     .addGap(39, 39, 39)
                                     .addGroup(contentPaneLayout.createParallelGroup()
-                                        .addComponent(textField3, GroupLayout.PREFERRED_SIZE, 104, GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(textField2, GroupLayout.PREFERRED_SIZE, 104, GroupLayout.PREFERRED_SIZE))))
+                                        .addComponent(txt_end, GroupLayout.PREFERRED_SIZE, 104, GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(txt_start, GroupLayout.PREFERRED_SIZE, 104, GroupLayout.PREFERRED_SIZE))))
                             .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
                             .addGroup(contentPaneLayout.createParallelGroup()
-                                .addComponent(label4, GroupLayout.PREFERRED_SIZE, 217, GroupLayout.PREFERRED_SIZE)
+                                .addComponent(lbl_logo2, GroupLayout.PREFERRED_SIZE, 217, GroupLayout.PREFERRED_SIZE)
                                 .addGroup(contentPaneLayout.createSequentialGroup()
-                                    .addComponent(button3, GroupLayout.PREFERRED_SIZE, 94, GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btn_export, GroupLayout.PREFERRED_SIZE, 94, GroupLayout.PREFERRED_SIZE)
                                     .addGap(28, 28, 28)
-                                    .addComponent(button2, GroupLayout.PREFERRED_SIZE, 95, GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(btn_open, GroupLayout.PREFERRED_SIZE, 95, GroupLayout.PREFERRED_SIZE))))
                         .addGroup(contentPaneLayout.createSequentialGroup()
-                            .addComponent(comboBox1, GroupLayout.PREFERRED_SIZE, 102, GroupLayout.PREFERRED_SIZE)
+                            .addComponent(cbx_user, GroupLayout.PREFERRED_SIZE, 102, GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 146, Short.MAX_VALUE)
-                            .addComponent(label5, GroupLayout.PREFERRED_SIZE, 248, GroupLayout.PREFERRED_SIZE))
+                            .addComponent(lbl_logo1, GroupLayout.PREFERRED_SIZE, 248, GroupLayout.PREFERRED_SIZE))
                         .addGroup(contentPaneLayout.createSequentialGroup()
-                            .addComponent(textField1, GroupLayout.PREFERRED_SIZE, 316, GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txt_url, GroupLayout.PREFERRED_SIZE, 316, GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 78, Short.MAX_VALUE)
-                            .addComponent(button1, GroupLayout.PREFERRED_SIZE, 102, GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(btn_submit, GroupLayout.PREFERRED_SIZE, 102, GroupLayout.PREFERRED_SIZE)))
                     .addGap(18, 18, 18))
         );
         contentPaneLayout.setVerticalGroup(
@@ -107,31 +111,31 @@ public class GUI extends JFrame {
                 .addGroup(contentPaneLayout.createSequentialGroup()
                     .addGap(21, 21, 21)
                     .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                        .addComponent(comboBox1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                        .addComponent(label5, GroupLayout.PREFERRED_SIZE, 26, GroupLayout.PREFERRED_SIZE))
+                        .addComponent(cbx_user, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lbl_logo1, GroupLayout.PREFERRED_SIZE, 26, GroupLayout.PREFERRED_SIZE))
                     .addGap(18, 18, 18)
                     .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                        .addComponent(textField1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                        .addComponent(button1))
-                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
+                        .addComponent(txt_url, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btn_submit))
+                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(scrollPane1, GroupLayout.PREFERRED_SIZE, 154, GroupLayout.PREFERRED_SIZE)
                     .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
                     .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                        .addComponent(checkBox1)
-                        .addComponent(button2)
-                        .addComponent(button3))
+                        .addComponent(cbx_option)
+                        .addComponent(btn_open)
+                        .addComponent(btn_export))
                     .addGroup(contentPaneLayout.createParallelGroup()
                         .addGroup(contentPaneLayout.createSequentialGroup()
                             .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                                .addComponent(label3, GroupLayout.PREFERRED_SIZE, 28, GroupLayout.PREFERRED_SIZE)
-                                .addComponent(textField2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+                                .addComponent(lbl_start, GroupLayout.PREFERRED_SIZE, 28, GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txt_start, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
                             .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                             .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                                .addComponent(label2, GroupLayout.PREFERRED_SIZE, 26, GroupLayout.PREFERRED_SIZE)
-                                .addComponent(textField3, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(lbl_end, GroupLayout.PREFERRED_SIZE, 26, GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txt_end, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))
                         .addGroup(contentPaneLayout.createSequentialGroup()
                             .addGap(6, 6, 6)
-                            .addComponent(label4, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addComponent(lbl_logo2, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGap(23, 23, 23))
         );
         pack();
@@ -140,20 +144,29 @@ public class GUI extends JFrame {
     }
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables
-    // Generated using JFormDesigner Evaluation license - zhichai
-    private JComboBox comboBox1;
-    private JTextField textField1;
-    private JButton button1;
-    private JLabel label2;
-    private JLabel label3;
-    private JTextField textField2;
-    private JTextField textField3;
+    // Generated using JFormDesigner Evaluation license - Tianyao Luo
+    private JComboBox cbx_user;
+    private JTextField txt_url;
+    private JButton btn_submit;
+    private JLabel lbl_end;
+    private JLabel lbl_start;
+    private JTextField txt_start;
+    private JTextField txt_end;
     private JScrollPane scrollPane1;
-    private JList list1;
-    private JCheckBox checkBox1;
-    private JButton button2;
-    private JButton button3;
-    private JLabel label4;
-    private JLabel label5;
+    private JList list_results;
+    private JCheckBox cbx_option;
+    private JButton btn_open;
+    private JButton btn_export;
+    private JLabel lbl_logo2;
+    private JLabel lbl_logo1;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
+
+    public static void main(String[] args){
+        EventQueue.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                new GUI();
+            }
+        });
+    }
 }

@@ -4,59 +4,60 @@ new FormModel {
 	contentType: "form/swing"
 	root: new FormRoot {
 		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-			"$horizontalGroup": "par l {seq l {space :p:29:p, par l {comp scrollPane1::l::496:x, seq t {par l {comp checkBox1::l:p::p, seq l {par l:::p {comp label3::::89:x, comp label2::::89:x}, space :p:39:p, par l {comp textField3:::p:104:p, comp textField2::l:p:104:p}}}, space ::47:x, par l {comp label4::l:p:217:p, seq l {comp button3:::p:94:p, space :p:28:p, comp button2:::p:95:p}}}, seq l {comp comboBox1:::p:102:p, space ::146:x, comp label5:::p:248:p}, seq {comp textField1:::p:316:p, space ::78:x, comp button1:::p:102:p}}, space :p:18:p}}"
-			"$verticalGroup": "par l {seq l {space :p:21:p, par b {comp comboBox1::b:p::p, comp label5::b:p:26:p}, space s:::p, par b {comp textField1::b:p::p, comp button1::b:p::p}, space ::23:x, comp scrollPane1:::p:154:p, space u:::p, par b {comp checkBox1::b:p::p, comp button2::b:p::p, comp button3::b:p::p}, par l {seq {par b {comp label3::b:p:28:p, comp textField2::b:p::p}, space :::p, par b {comp label2::b:p:26:p, comp textField3::b:p::p}}, seq {space :p:6:p, comp label4:::::x}}, space :p:23:p}}"
+			"$horizontalGroup": "par l {seq l {space :p:29:p, par l {comp scrollPane1::l::496:x, seq t {par l {comp cbx_option::l:p::p, seq l {par l:::p {comp lbl_start::::89:x, comp lbl_end::::89:x}, space :p:39:p, par l {comp txt_end:::p:104:p, comp txt_start::l:p:104:p}}}, space ::47:x, par l {comp lbl_logo2::l:p:217:p, seq l {comp btn_export:::p:94:p, space :p:28:p, comp btn_open:::p:95:p}}}, seq l {comp cbx_user:::p:102:p, space ::146:x, comp lbl_logo1:::p:248:p}, seq {comp txt_url:::p:316:p, space ::78:x, comp btn_submit:::p:102:p}}, space :p:18:p}}"
+			"$verticalGroup": "par l {seq l {space :p:21:p, par b {comp cbx_user::b:p::p, comp lbl_logo1::b:p:26:p}, space s:::p, par b {comp txt_url::b:p::p, comp btn_submit::b:p::p}, space :::x, comp scrollPane1:::p:154:p, space u:::p, par b {comp cbx_option::b:p::p, comp btn_open::b:p::p, comp btn_export::b:p::p}, par l {seq {par b {comp lbl_start::b:p:28:p, comp txt_start::b:p::p}, space :::p, par b {comp lbl_end::b:p:26:p, comp txt_end::b:p::p}}, seq {space :p:6:p, comp lbl_logo2:::::x}}, space :p:23:p}}"
 		} ) {
 			name: "this"
 			add( new FormComponent( "javax.swing.JComboBox" ) {
-				name: "comboBox1"
+				name: "cbx_user"
 			} )
 			add( new FormComponent( "javax.swing.JTextField" ) {
-				name: "textField1"
+				name: "txt_url"
+				"text": "http://"
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
-				name: "button1"
-				"text": "text"
+				name: "btn_submit"
+				"text": "SUBMIT"
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
-				name: "label2"
-				"text": "text"
+				name: "lbl_end"
+				"text": "End Date"
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
-				name: "label3"
-				"text": "text"
+				name: "lbl_start"
+				"text": "Start Date"
 			} )
 			add( new FormComponent( "javax.swing.JTextField" ) {
-				name: "textField2"
+				name: "txt_start"
 			} )
 			add( new FormComponent( "javax.swing.JTextField" ) {
-				name: "textField3"
+				name: "txt_end"
 			} )
 			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
 				name: "scrollPane1"
 				add( new FormComponent( "javax.swing.JList" ) {
-					name: "list1"
+					name: "list_results"
 				} )
 			} )
 			add( new FormComponent( "javax.swing.JCheckBox" ) {
-				name: "checkBox1"
-				"text": "text"
+				name: "cbx_option"
+				"text": "Advanced Options"
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
-				name: "button2"
-				"text": "text"
+				name: "btn_open"
+				"text": "OPEN"
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
-				name: "button3"
-				"text": "text"
+				name: "btn_export"
+				"text": "EXPORT"
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
-				name: "label4"
-				"text": "text"
+				name: "lbl_logo2"
+				"text": "LOGO"
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
-				name: "label5"
-				"text": "text"
+				name: "lbl_logo1"
+				"text": "LOGO!"
 			} )
 		}, new FormLayoutConstraints( null ) {
 			"location": new java.awt.Point( 0, 0 )
