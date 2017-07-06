@@ -5,6 +5,8 @@
 package com.cz.app;
 
 import java.awt.*;
+import java.awt.event.*;
+import java.net.URL;
 import javax.swing.*;
 import javax.swing.GroupLayout;
 
@@ -14,7 +16,33 @@ import javax.swing.GroupLayout;
 public class GUI extends JFrame {
     public GUI() {
         initComponents();
+        initControllers();
         this.setVisible(true);
+    }
+
+    private void cbx_optionItemStateChanged(ItemEvent e) {
+        // TODO add your code here
+        if(e.getStateChange() == ItemEvent.SELECTED){
+            txt_start.setEnabled(true);
+            txt_end.setEnabled(true);
+        }
+        else{
+            txt_start.setEnabled(false);
+            txt_end.setEnabled(false);
+        }
+    }
+
+    private void initControllers(){
+        UrlController url_controller = new UrlController(txt_url, "http://");
+        txt_url.addFocusListener(url_controller);
+        txt_url.addPropertyChangeListener(url_controller);
+        txt_url.getDocument().addDocumentListener(url_controller);
+
+        cbx_option.addItemListener(e -> cbx_optionItemStateChanged(e));
+    }
+
+    private void txt_urlFocusGained(FocusEvent e) {
+        // TODO add your code here
     }
 
     private void initComponents() {
@@ -39,7 +67,7 @@ public class GUI extends JFrame {
         Container contentPane = getContentPane();
 
         //---- txt_url ----
-        txt_url.setText("http://");
+        txt_url.setForeground(Color.black);
 
         //---- btn_submit ----
         btn_submit.setText("SUBMIT");
@@ -49,6 +77,12 @@ public class GUI extends JFrame {
 
         //---- lbl_start ----
         lbl_start.setText("Start Date");
+
+        //---- txt_start ----
+        txt_start.setEnabled(false);
+
+        //---- txt_end ----
+        txt_end.setEnabled(false);
 
         //======== scrollPane1 ========
         {
@@ -66,6 +100,7 @@ public class GUI extends JFrame {
 
         //---- lbl_logo2 ----
         lbl_logo2.setText("LOGO");
+        lbl_logo2.setForeground(Color.lightGray);
 
         //---- lbl_logo1 ----
         lbl_logo1.setText("LOGO!");
@@ -85,10 +120,10 @@ public class GUI extends JFrame {
                                     .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
                                         .addComponent(lbl_start, GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE)
                                         .addComponent(lbl_end, GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE))
-                                    .addGap(39, 39, 39)
+                                    .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
                                     .addGroup(contentPaneLayout.createParallelGroup()
-                                        .addComponent(txt_end, GroupLayout.PREFERRED_SIZE, 104, GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(txt_start, GroupLayout.PREFERRED_SIZE, 104, GroupLayout.PREFERRED_SIZE))))
+                                        .addComponent(txt_end, GroupLayout.PREFERRED_SIZE, 131, GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(txt_start, GroupLayout.PREFERRED_SIZE, 131, GroupLayout.PREFERRED_SIZE))))
                             .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
                             .addGroup(contentPaneLayout.createParallelGroup()
                                 .addComponent(lbl_logo2, GroupLayout.PREFERRED_SIZE, 217, GroupLayout.PREFERRED_SIZE)
