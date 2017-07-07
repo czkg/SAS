@@ -2,6 +2,3 @@ selenium-java-3.4.0/
 .DS_Store
 .idea/
 out/
-src/.DS_Store
-src/com/.DS_Store
-src/com/cz/.DS_Store
