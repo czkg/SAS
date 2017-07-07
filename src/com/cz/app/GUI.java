@@ -32,7 +32,16 @@ public class GUI extends JFrame {
         }
     }
 
+    private Object makeObj(final String item){
+        return new Object(){public String toString(){
+            return item;
+        }};
+    }
+
     private void initControllers(){
+        cbx_user.addItem(makeObj("Single User"));
+        cbx_user.addItem(makeObj("All Users"));
+        cbx_user.addActionListener(new ComboBoxController(cbx_user));
         UrlController url_controller = new UrlController(txt_url, "http://");
         txt_url.addFocusListener(url_controller);
         txt_url.addPropertyChangeListener(url_controller);
@@ -41,9 +50,6 @@ public class GUI extends JFrame {
         cbx_option.addItemListener(e -> cbx_optionItemStateChanged(e));
     }
 
-    private void txt_urlFocusGained(FocusEvent e) {
-        // TODO add your code here
-    }
 
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
@@ -67,12 +73,6 @@ public class GUI extends JFrame {
         Container contentPane = getContentPane();
 
         //---- txt_url ----
-        txt_url.addFocusListener(new FocusAdapter() {
-            @Override
-            public void focusGained(FocusEvent e) {
-                txt_urlFocusGained(e);
-            }
-        });
 
         //---- btn_submit ----
         btn_submit.setText("SUBMIT");
@@ -121,8 +121,8 @@ public class GUI extends JFrame {
                     .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.TRAILING)
                         .addComponent(scrollPane1, GroupLayout.Alignment.LEADING, GroupLayout.DEFAULT_SIZE, 496, Short.MAX_VALUE)
                         .addGroup(GroupLayout.Alignment.LEADING, contentPaneLayout.createSequentialGroup()
-                            .addComponent(cbx_user, GroupLayout.PREFERRED_SIZE, 102, GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 146, Short.MAX_VALUE)
+                            .addComponent(cbx_user, GroupLayout.PREFERRED_SIZE, 156, GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 92, Short.MAX_VALUE)
                             .addComponent(lbl_logo1, GroupLayout.PREFERRED_SIZE, 248, GroupLayout.PREFERRED_SIZE))
                         .addGroup(GroupLayout.Alignment.LEADING, contentPaneLayout.createSequentialGroup()
                             .addComponent(txt_url, GroupLayout.PREFERRED_SIZE, 316, GroupLayout.PREFERRED_SIZE)
@@ -155,8 +155,8 @@ public class GUI extends JFrame {
                 .addGroup(contentPaneLayout.createSequentialGroup()
                     .addGap(21, 21, 21)
                     .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                        .addComponent(cbx_user, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                        .addComponent(lbl_logo1, GroupLayout.PREFERRED_SIZE, 26, GroupLayout.PREFERRED_SIZE))
+                        .addComponent(lbl_logo1, GroupLayout.PREFERRED_SIZE, 26, GroupLayout.PREFERRED_SIZE)
+                        .addComponent(cbx_user, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
                     .addGap(18, 18, 18)
                     .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
                         .addComponent(txt_url, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
@@ -168,7 +168,6 @@ public class GUI extends JFrame {
                         .addComponent(cbx_option)
                         .addComponent(btn_open)
                         .addComponent(btn_export))
-                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                     .addGroup(contentPaneLayout.createParallelGroup()
                         .addGroup(contentPaneLayout.createSequentialGroup()
                             .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
@@ -207,12 +206,4 @@ public class GUI extends JFrame {
     private JLabel lbl_logo1;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
 
-    public static void main(String[] args){
-        EventQueue.invokeLater(new Runnable() {
-            @Override
-            public void run() {
-                new GUI();
-            }
-        });
-    }
 }
