@@ -39,8 +39,8 @@ public class GUI extends JFrame {
     }
 
     private void initControllers(){
-        cbx_user.addItem(makeObj("Single User"));
-        cbx_user.addItem(makeObj("All Users"));
+        cbx_user.addItem(makeObj("Customer"));
+        cbx_user.addItem(makeObj("Product"));
         cbx_user.addActionListener(new ComboBoxController(cbx_user));
         UrlController url_controller = new UrlController(txt_url, "http://");
         txt_url.addFocusListener(url_controller);
