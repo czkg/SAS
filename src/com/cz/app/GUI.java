@@ -47,7 +47,7 @@ public class GUI extends JFrame {
 
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
-        // Generated using JFormDesigner Evaluation license - Tianyao Luo
+        // Generated using JFormDesigner Evaluation license - Yishuo Wang
         cbx_user = new JComboBox();
         txt_url = new JTextField();
         btn_submit = new JButton();
@@ -106,7 +106,7 @@ public class GUI extends JFrame {
 
         //---- lbl_logo2 ----
         lbl_logo2.setForeground(Color.lightGray);
-        lbl_logo2.setIcon(new ImageIcon("/home/tianyaoluke/IdeaProjects/SAS/resources/logo_2.png"));
+        lbl_logo2.setIcon(new ImageIcon("/Users/zhichai/HC/SAS/resources/logo_2.png"));
         lbl_logo2.setHorizontalAlignment(SwingConstants.CENTER);
 
         //---- lbl_logo1 ----
@@ -168,7 +168,6 @@ public class GUI extends JFrame {
                         .addComponent(cbx_option)
                         .addComponent(btn_open)
                         .addComponent(btn_export))
-                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                     .addGroup(contentPaneLayout.createParallelGroup()
                         .addGroup(contentPaneLayout.createSequentialGroup()
                             .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
@@ -190,7 +189,7 @@ public class GUI extends JFrame {
     }
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables
-    // Generated using JFormDesigner Evaluation license - Tianyao Luo
+    // Generated using JFormDesigner Evaluation license - Yishuo Wang
     private JComboBox cbx_user;
     private JTextField txt_url;
     private JButton btn_submit;

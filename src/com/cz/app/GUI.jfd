@@ -5,7 +5,7 @@ new FormModel {
 	root: new FormRoot {
 		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
 			"$horizontalGroup": "par l {seq l {space :p:29:p, par t {comp scrollPane1::l::496:x, seq l {comp cbx_user:::p:102:p, space ::146:x, comp lbl_logo1:::p:248:p}, seq l {comp txt_url:::p:316:p, space ::78:x, comp btn_submit:::p:102:p}, seq t {par l {comp cbx_option::l:p::p, seq l {par l {comp lbl_end:::::x, seq {space :0:0:x, comp lbl_start:::p:89:p}}, space u:::p, par l {comp txt_end:::p:131:p, comp txt_start:::p:131:p}}}, space ::47:x, par l {seq {comp btn_export:::p:94:p, space :p:28:p, comp btn_open:::p:95:p}, comp lbl_logo2:::::x}}}, space :18:18:p}}"
-			"$verticalGroup": "par l {seq l {space :p:21:p, par b {comp cbx_user::b:p::p, comp lbl_logo1::b:p:26:p}, space s:::p, par b {comp txt_url::b:p::p, comp btn_submit::b:p::p}, space :::x, comp scrollPane1:::p:154:p, space u:::p, par b {comp cbx_option::b:p::p, comp btn_open::b:p::p, comp btn_export::b:p::p}, space :::p, par l {seq {par b {comp lbl_start::b:p:28:p, comp txt_start::b:p::p}, space :::p, par l {comp txt_end:::p::p, comp lbl_end::l:p:26:p}, space :0:0:x}, seq t {space :0:0:x, comp lbl_logo2:::p:72:p}}, space :::p}}"
+			"$verticalGroup": "par l {seq l {space :p:21:p, par b {comp cbx_user::b:p::p, comp lbl_logo1::b:p:26:p}, space s:::p, par b {comp txt_url::b:p::p, comp btn_submit::b:p::p}, space :::x, comp scrollPane1:::p:154:p, space u:::p, par b {comp cbx_option::b:p::p, comp btn_open::b:p::p, comp btn_export::b:p::p}, par l {seq {par b {comp lbl_start::b:p:28:p, comp txt_start::b:p::p}, space :::p, par l {comp txt_end:::p::p, comp lbl_end::l:p:26:p}, space :0:0:x}, seq t {space :0:0:x, comp lbl_logo2:::p:72:p}}, space :::p}}"
 		} ) {
 			name: "this"
 			add( new FormComponent( "javax.swing.JComboBox" ) {
@@ -57,7 +57,7 @@ new FormModel {
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "lbl_logo2"
 				"foreground": sfield java.awt.Color lightGray
-				"icon": new com.jformdesigner.model.SwingIcon( 1, "/home/tianyaoluke/IdeaProjects/SAS/resources/logo_2.png" )
+				"icon": new com.jformdesigner.model.SwingIcon( 1, "/Users/zhichai/HC/SAS/resources/logo_2.png" )
 				"horizontalAlignment": 0
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
