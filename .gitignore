@@ -1,2 +1,4 @@
-./selenium-java-3.4.0/
+selenium-java-3.4.0/
 .DS_Store
+.idea/
+out/
