@@ -4,18 +4,27 @@
     <exclude-output />
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/resources" type="java-resource" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+<<<<<<< HEAD
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
           <root url="jar://$MODULE_DIR$/selenium-java-3.4.0/client-combined-3.4.0-nodeps.jar!/" />
+=======
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/resouce" />
+>>>>>>> 672ca30a583db051241b9f035769ccfac76f6f4b
         </CLASSES>
         <JAVADOC />
         <SOURCES />
       </library>
     </orderEntry>
+<<<<<<< HEAD
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
@@ -26,5 +35,7 @@
         <jarDirectory url="file://$MODULE_DIR$/selenium-java-3.4.0/lib" recursive="false" />
       </library>
     </orderEntry>
+=======
+>>>>>>> 672ca30a583db051241b9f035769ccfac76f6f4b
   </component>
 </module>
